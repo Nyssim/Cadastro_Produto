@@ -5,6 +5,8 @@
 package com.produto.interfacegrafica;
 
 import com.produto.modelo.ProdutoModel.JTableProduto;
+import com.produto.modelo.ProdutoModel.ProdutoModel;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -12,15 +14,22 @@ import com.produto.modelo.ProdutoModel.JTableProduto;
  */
 public class ModalCadastroFunc extends javax.swing.JFrame {
     
-    JTableProduto tabela = new JTableProduto();
+    JTableProduto tabelaModelo = new JTableProduto();
+    CadastroProduto cadastro = new CadastroProduto();
+    
 
     /**
      * Creates new form ModalCadastroFunc
      */
     public ModalCadastroFunc() {
         initComponents();
+        tabelaModelo = new JTableProduto();
+        cadastro.jTableProduto.setModel(tabelaModelo);
+        
 
     }
+    
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -31,6 +40,7 @@ public class ModalCadastroFunc extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jLabel1 = new javax.swing.JLabel();
         codigo = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
@@ -61,8 +71,10 @@ public class ModalCadastroFunc extends javax.swing.JFrame {
 
         jLabel6.setText("Produtos Ativo ?");
 
+        buttonGroup1.add(jRadioButton1);
         jRadioButton1.setText("Sim");
 
+        buttonGroup1.add(jRadioButton2);
         jRadioButton2.setText("Não");
 
         jButton1.setText("Finalizar");
@@ -163,8 +175,28 @@ public class ModalCadastroFunc extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    //Salvar as informações
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        /*ProdutoModel func = new ProdutoModel();
+        func.setCodigo(codigo.getText());
+        func.setNome(nome.getText());
+        func.setCodigoBarra(codigoBarra.getText());
+        func.setUnidade(Integer.parseInt(unidade.getText()));
+        func.setPeso(Double.parseDouble(peso.getText()));
+        this.tabelaModelo.addProduto(dados[0]);*/
+        
+        Object[] ProdutoModel = {
+            codigo.getText(),
+            codigoBarra.getText(),
+            Integer.parseInt(unidade.getText()),
+            Double.parseDouble(peso.getText())
+        };
+        
+        tabelaModelo.addProduto(ProdutoModel);
+        
+        Object[] dados = {codigo.getText(),codigoBarra.getText(),Integer.parseInt(unidade.getText()),Double.parseDouble(peso.getText())};
+        System.out.print(dados[0]);
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -207,6 +239,7 @@ public class ModalCadastroFunc extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JTextField codigo;
     private javax.swing.JTextField codigoBarra;
     private javax.swing.JButton jButton1;

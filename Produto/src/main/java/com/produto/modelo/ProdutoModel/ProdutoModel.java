@@ -17,7 +17,7 @@ public class ProdutoModel {
     private int unidade;
     private double peso;
     private boolean estado;
-
+    
     //Encapsulamento dos atributos dos produtos
 
     /**

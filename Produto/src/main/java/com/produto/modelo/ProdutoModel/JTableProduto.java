@@ -4,6 +4,7 @@
  */
 package com.produto.modelo.ProdutoModel;
 
+import com.produto.interfacegrafica.CadastroProduto;
 import java.util.ArrayList;
 import javax.swing.table.AbstractTableModel;
 
@@ -37,14 +38,17 @@ public class JTableProduto extends AbstractTableModel {
         fireTableDataChanged();
     }
     
+    //Metodo de Alterar
     public void altProduto(int linha) {
         
     }
     
+    //Metodo de Alterar
     public void inaProduto(int linha) {
         
     }
     
+    //Metodo de Ativar
     public void atiProduto(int linha) {
         
     }
