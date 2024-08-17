@@ -17,7 +17,7 @@ public class JTableProduto extends AbstractTableModel {
     //Atriutos da Tabela
     
     private ArrayList<ProdutoModel>  listaDeProduto;
-    private String[] colunas = {"Código","Produto","Código de Barras", "Unidade"};
+    private String[] colunas = {"Código","Código de Barras","Nome do Produto", "Unidade"};
     
     //Metodos da Tabela
     
@@ -33,14 +33,15 @@ public class JTableProduto extends AbstractTableModel {
     }
     
     //Metodo deletar
-    public void delProduto(int linha) {
+    public void removeProduto(int linha) {
         this.listaDeProduto.remove( linha);
         fireTableDataChanged();
     }
     
     //Metodo de Alterar
-    public void altProduto(int linha) {
-        
+    public void altProduto(ProdutoModel func) {
+        this.listaDeProduto.add( func);
+        fireTableDataChanged();
     }
     
     //Metodo de Alterar
