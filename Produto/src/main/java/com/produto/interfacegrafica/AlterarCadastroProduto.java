@@ -167,7 +167,6 @@ public class AlterarCadastroProduto extends javax.swing.JFrame {
         func.setPeso(Double.parseDouble(peso.getText()));
         this.cadastro.salvarProduto(func);
         dispose();
-        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     
@@ -175,7 +174,7 @@ public class AlterarCadastroProduto extends javax.swing.JFrame {
        codigo.setText(prod.getCodigo());
        codigoBarra.setText(prod.getCodigoBarra());
        nome.setText(prod.getNome());
-       unidade.setText(prod.getUnidade());
+       unidade.setText(prod.getUnidade() + "");
        
     }
     public static void main(String args[]) {
