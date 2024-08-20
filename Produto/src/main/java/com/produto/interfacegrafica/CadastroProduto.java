@@ -36,6 +36,11 @@ public class CadastroProduto extends javax.swing.JFrame {
     public void salvarProduto( ProdutoModel prod) {
         this.tabelaModelo.addProduto( prod);
     }
+    
+    public void alterarProduto( ProdutoModel prod) {
+        this.tabelaModelo.pegaLinha(jTableProduto.getSelectedRow());
+        
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -245,15 +250,16 @@ public class CadastroProduto extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jButton2)))
                 .addGap(30, 30, 30)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton6)
-                    .addComponent(jButton7)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel5)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jRadioButton1)
-                            .addComponent(jRadioButton2))))
+                            .addComponent(jRadioButton2)))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jButton6)
+                        .addComponent(jButton7)))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 103, Short.MAX_VALUE)
                 .addContainerGap())
@@ -300,7 +306,12 @@ public class CadastroProduto extends javax.swing.JFrame {
 
     //Alterar dados
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        new AlterarCadastroProduto().setVisible(true);
+        AlterarCadastroProduto alterar = new AlterarCadastroProduto();
+        ProdutoModel produto = new ProdutoModel();        
+        produto = this.tabelaModelo.pegaLinha(jTableProduto.getSelectedRow());       
+        alterar.metodo(produto);
+        alterar.setVisible(true);
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**

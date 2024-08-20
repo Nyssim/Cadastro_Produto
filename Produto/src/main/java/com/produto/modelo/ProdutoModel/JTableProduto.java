@@ -26,6 +26,10 @@ public class JTableProduto extends AbstractTableModel {
         this.listaDeProduto = new ArrayList<>();
     }
     
+    public ProdutoModel pegaLinha(int linha){
+        return this.listaDeProduto.get(linha);
+    }
+    
     //Metodo adicionar
     public void addProduto(ProdutoModel func) {
         this.listaDeProduto.add( func);

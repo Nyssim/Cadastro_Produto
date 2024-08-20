@@ -7,6 +7,7 @@ com\produto\interfacegrafica\ModalCadastroFunc$2.class
 com\produto\modelo\ProdutoModel\ProdutoModel.class
 com\produto\interfacegrafica\AlterarCadastroProduto$2.class
 com\produto\interfacegrafica\CadastroProduto$1.class
+com\produto\interfacegrafica\AlterarCadastroProduto$3.class
 com\produto\modelo\ProdutoModel\JTableProduto.class
 com\produto\interfacegrafica\CadastroProduto$4.class
 com\produto\interfacegrafica\AlterarCadastroProduto.class
