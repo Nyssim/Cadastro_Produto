@@ -1,4 +1,6 @@
 com\mycompany\mercado\interfacegrafic\CadastroUsuario.class
+com\mycompany\mercado\interfacegrafic\PaginaInicial$1.class
+com\mycompany\mercado\interfacegrafic\PaginaInicial.class
 com\mycompany\conectamysql\Pessoa.class
 com\mycompany\mercado\interfacegrafic\CadastroCliente$1.class
 com\mycompany\mercado\interfacegrafic\CadastroCliente.class
@@ -9,4 +11,6 @@ com\mycompany\mercado\interfacegrafic\CadastroUsuario$2.class
 com\mycompany\conectamysql\PessoaPersistencia.class
 com\mycompany\conectamysql\ConectaMysql.class
 com\mycompany\mercado\classe\ClasseUsuario.class
+com\mycompany\mercado\interfacegrafic\PaginaInicial$2.class
 com\mycompany\conectamysql\PersistenciaUsuario.class
+com\mycompany\mercado\interfacegrafic\CadastroUsuario$3.class

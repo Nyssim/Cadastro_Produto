@@ -20,9 +20,6 @@ public class CadastroUsuario extends javax.swing.JFrame {
     public CadastroUsuario() {
         initComponents();
     }
-
-    //Estanciando Classes
-
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -38,8 +35,9 @@ public class CadastroUsuario extends javax.swing.JFrame {
         jTextFieldSenha = new javax.swing.JTextField();
         jTextFieldConfirmaSenha = new javax.swing.JTextField();
         jComboBoxPerfil = new javax.swing.JComboBox<>();
+        jButton2 = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jLabel1.setText("Nome");
 
@@ -57,6 +55,13 @@ public class CadastroUsuario extends javax.swing.JFrame {
         });
 
         jComboBoxPerfil.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Caixa", "Gerente", " " }));
+
+        jButton2.setText("Cancelar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -85,7 +90,8 @@ public class CadastroUsuario extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel4)
                             .addComponent(jComboBoxPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 2, Short.MAX_VALUE)))
+                        .addGap(0, 2, Short.MAX_VALUE))
+                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -111,7 +117,9 @@ public class CadastroUsuario extends javax.swing.JFrame {
                             .addComponent(jComboBoxPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(39, 39, 39)
                 .addComponent(jButton1)
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton2)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -119,8 +127,6 @@ public class CadastroUsuario extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
     
-
-        
         //Caso a senha está certa
         if(jTextFieldSenha.getText().equals(jTextFieldConfirmaSenha.getText()))  {
             PersistenciaUsuario p = new PersistenciaUsuario();
@@ -129,6 +135,7 @@ public class CadastroUsuario extends javax.swing.JFrame {
             u.setSenha(jTextFieldSenha.getText());
             u.setPerfil(jComboBoxPerfil.getSelectedItem().toString());
             p.salvarUsuario(u);
+            limpar();
         }
         
         //Caso a senha está errada
@@ -136,10 +143,19 @@ public class CadastroUsuario extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(rootPane, "Sua senha não é igual");
         }
 
-        
-
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        dispose();
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void limpar(){
+        jTextFieldNome.setText("");
+        jTextFieldSenha.setText("");
+        jTextFieldConfirmaSenha.setText("");
+        jComboBoxPerfil.setSelectedIndex(0);
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -178,6 +194,7 @@ public class CadastroUsuario extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JComboBox<String> jComboBoxPerfil;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
