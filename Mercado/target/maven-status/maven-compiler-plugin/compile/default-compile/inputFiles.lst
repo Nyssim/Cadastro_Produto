@@ -1,10 +1,12 @@
 C:\Users\Aluno\Documents\NetBeansProjects\Mercado\src\main\java\com\mycompany\mercado\interfacegrafic\PaginaInicial.java
 C:\Users\Aluno\Documents\NetBeansProjects\Mercado\src\main\java\com\mycompany\mercado\tabela\TabelaUsuario.java
-C:\Users\Aluno\Documents\NetBeansProjects\Mercado\src\main\java\com\mycompany\conectamysql\PessoaPersistencia.java
+C:\Users\Aluno\Documents\NetBeansProjects\Mercado\src\main\java\com\mycompany\mercado\tabela\TabelaProduto.java
+C:\Users\Aluno\Documents\NetBeansProjects\Mercado\src\main\java\com\mycompany\conectamysql\PersistenciaProduto.java
 C:\Users\Aluno\Documents\NetBeansProjects\Mercado\src\main\java\com\mycompany\mercado\interfacegrafic\CadastroCliente.java
-C:\Users\Aluno\Documents\NetBeansProjects\Mercado\src\main\java\com\mycompany\conectamysql\ConectaMysql.java
+C:\Users\Aluno\Documents\NetBeansProjects\Mercado\src\main\java\com\mycompany\mercado\interfacegrafic\Login.java
 C:\Users\Aluno\Documents\NetBeansProjects\Mercado\src\main\java\com\mycompany\mercado\classe\ClasseUsuario.java
 C:\Users\Aluno\Documents\NetBeansProjects\Mercado\src\main\java\com\mycompany\mercado\interfacegrafic\CadastroProduto.java
+C:\Users\Aluno\Documents\NetBeansProjects\Mercado\src\main\java\com\mycompany\conectamysql\PersistenciaLogin.java
+C:\Users\Aluno\Documents\NetBeansProjects\Mercado\src\main\java\com\mycompany\mercado\classe\ClasseProduto.java
 C:\Users\Aluno\Documents\NetBeansProjects\Mercado\src\main\java\com\mycompany\mercado\interfacegrafic\CadastroUsuario.java
-C:\Users\Aluno\Documents\NetBeansProjects\Mercado\src\main\java\com\mycompany\conectamysql\Pessoa.java
 C:\Users\Aluno\Documents\NetBeansProjects\Mercado\src\main\java\com\mycompany\conectamysql\PersistenciaUsuario.java
